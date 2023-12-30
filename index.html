@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Store</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .header a {
+            position: relative;
+            justify-content: center;
+            margin-right: 20px;
+            /* top: 10px; */
+            left: 50%;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .header a h3 {
+            color: inherit;
+        }
+
+        .header img {
+            margin-left: 2%;
+        }
+
+        .rem {
+            text-align: center;
+        }
+
+        .txt {
+            position: relative;
+            top: 50px;
+        }
+
+        /* .avail{
+            display: flex;
+            gap: 10px;
+        } */
+        /* .dropdown-content{
+            position: relative;
+            top: 70px;
+            left: 40%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid white;
+            width: 20%;
+            height: 50px;
+        } */
+        .dropdown-content {
+            position: relative;
+            top: 70px;
+            left: 40%;
+            outline: none;
+            border: none;
+            width: 20%;
+        }
+
+        .dropdown-content select {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+
+        .tshrts {
+            position: relative;
+            top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tshrts>div {
+            flex: 0 0 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+
+        .tshrts img {
+            max-width: 100%;
+            /* height: auto; */
+            height: 600px; /* Set a fixed height for all images */
+            object-fit: cover;
+        }
+        .tshrts >div:hover{
+            transform: scale(1.1);
+        }
+
+        .tshrts s {
+            color: red;
+        }
+
+        .last {
+            position: relative;
+            top: 200px;
+        }
+
+        .last form {
+            border: none;
+            outline: none;
+            /* border-bottom: 1px solid white; */
+        }
+
+        .last input {
+            width: 300px;
+            border: none;
+            /* Remove default input border */
+            border-bottom: 1px solid white;
+            /* Add white bottom border */
+        }
+
+        .footr {
+            position: relative;
+            top: 300px;
+            /* left: 500px;
+            display: flex;
+            gap: 30px;
+            text-decoration: none;
+            width: 100%; */
+
+            left: 50%; /* Adjusted the left property to center the element */
+            transform: translateX(-50%); /* Center the element using transform */
+            display: flex;
+            gap: 30px;
+            text-decoration: none;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="logo.avif" alt="">
+        <a href="">
+            <h3>The Manga Store</h3>
+        </a>
+        <a href="">
+            <h3>Sale!</h3>
+        </a>
+        <a href="">
+            <h3>Shop</h3>
+        </a>
+        <a href="">
+            <h3>Return and Exchange</h3>
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-arms-up" viewBox="0 0 16 16">
+                <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                <path
+                    d="m5.93 6.704-.846 8.451a.768.768 0 0 0 1.523.203l.81-4.865a.59.59 0 0 1 1.165 0l.81 4.865a.768.768 0 0 0 1.523-.203l-.845-8.451A1.492 1.492 0 0 1 10.5 5.5L13 2.284a.796.796 0 0 0-1.239-.998L9.634 3.84a.72.72 0 0 1-.33.235c-.23.074-.665.176-1.304.176-.64 0-1.074-.102-1.305-.176a.72.72 0 0 1-.329-.235L4.239 1.286a.796.796 0 0 0-1.24.998l2.5 3.216c.317.316.475.758.43 1.204Z" />
+            </svg>
+        </a>
+    </div>
+    <div class="yrend">
+        <img src="year_end.webp" alt="" width="100%">
+    </div>
+    <div class="rem">
+        <div class="txt">
+            <p>COP before your favourite gets 'OUT OF STOCK'</p> <br><br><br>
+            <h2>T-Shirts</h2><br>
+            <div class="avail">
+                <h4>AVAILABILITY</h4>
+                <input type="checkbox" name="" id="cb1"><label for="cb1">
+                    In stock (16)</label><br>
+                <input type="checkbox" name="" id="cb1"><label for="cb1">
+                    Out of stock (12)</label>
+            </div>
+        </div>
+
+        <div class="dropdown-content">
+
+            <select>
+                <option selected>Date, New to Old</option>
+                <option>Date, Old to New</option>
+                <option>Sort</option>
+                <option>Featuring</option>
+                <option>Best Selling</option>
+                <option>Price, Low to High</option>
+                <option>Price, High to Low</option>
+            </select>
+
+        </div>
+        <div class="tshrts">
+            <div class="t1">
+                <img src="t1.webp" alt="">
+                <p>Gear 5</p>
+                <p><s>Rs.1500</s> Rs.1000</p>
+            </div>
+            <div class="t2">
+                <img src="t22.webp" alt="" height="900px">
+                <p>Hope of Universe</p>
+                <p><s>Rs.1700</s> Rs.1200</p>
+            </div>
+            <div class="t3">
+                <img src="t3.webp" alt="">
+                <p>Curse of Hate</p>
+                <p><s>Rs.800</s> Rs.700</p>
+            </div>
+            <div class="t4">
+                <img src="t4.webp" alt="">
+                <p>Chainsaw Man</p>
+                <p><s>Rs.1800</s> Rs.1300</p>
+            </div>
+            <div class="t5">
+                <img src="t5.webp" alt="">
+                <p>Mob Psycho</p>
+                <p><s>Rs.1800</s> Rs.1250</p>
+            </div>
+            <div class="t6">
+                <img src="t6.webp" alt="">
+                <p>Akatsuki</p>
+                <p><s>Rs.1800</s> Rs.1499</p>
+            </div>
+            <div class="t7">
+                <img src="t7.webp" alt="">
+                <p>Levi</p>
+                <p><s>Rs.1800</s> Rs.1000</p>
+            </div>
+            <div class="t8">
+                <img src="t8.webp" alt="">
+                <p>Haku</p>
+                <p><s>Rs.1800</s> Rs.1260</p>
+            </div>
+        </div>
+        <div class="last">
+            <h4>JOIN US FOR UPDATES</h4><br>
+            <form action="">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg>
+            </form>
+        </div>
+        <div class="footr">
+            <a href="">
+                <p>RETURN & EXCHANGE</p>
+            </a>
+            <a href="">
+                <p>SHIPPING POLICY</p>
+            </a>
+            <a href="">
+                <p>PRIVACY POLICY</p>
+            </a>
+            <a href="">
+                <p>TERMS</p>
+            </a>
+            <!-- <br><br><br> -->
+
+        </div>
+        <p style="position: relative;top: 400px;">The Manga Store<br><br><br><br></p>
+    </div>
+</body>
+
+</html>
